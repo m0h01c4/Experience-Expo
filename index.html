@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quest for Joy - Podcast & Video Showcase</title>
+    <meta name="description" content="Experience 'A Quest for Joy' - An inspiring podcast and video series about finding happiness and purpose in life.">
+    <meta name="keywords" content="podcast, video, joy, happiness, inspiration, motivation">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gibson:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-sun"></i> A Quest for Joy</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#quest-for-joy" class="nav-link">Quest for Joy</a></li>
+                    <li><a href="#podcast" class="nav-link">Podcast</a></li>
+                    <li><a href="#video" class="nav-link">Video</a></li>
+                    <li><a href="#strategy" class="nav-link">Strategy</a></li>
+                    <li><a href="#squads" class="nav-link">Squads</a></li>
+                    <li><a href="#org-chart" class="nav-link">Org Chart</a></li>
+                    <li><a href="#about" class="nav-link">Experience Expo</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-image">
+            <img src="joy.jpg" alt="A Quest for Joy" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-visual">
+                <!-- Image content is now handled by the background image -->
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-title"><span class="highlight">Experience</span> Quest for Joy</h1>
+                <p class="hero-description">
+                    Discover the transformative insights that helped our quest for joy in Sam's Club.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#podcast" class="btn btn-primary">
+                        <i class="fas fa-podcast"></i> Listen to Podcast
+                    </a>
+                    <a href="#video" class="btn btn-secondary">
+                        <i class="fas fa-play"></i> Watch Video
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About A Quest for Joy Section -->
+    <section id="quest-for-joy" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-heart"></i> About A Quest for Joy</h2>
+                <p>Our mission to spread happiness and positivity</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        "A Quest for Joy" is more than just content—it's a movement toward understanding 
+                        what it means to live a fulfilling and joyful life. Through our podcast and video 
+                        series, we explore the depths of human happiness, sharing stories, insights, and 
+                        practical wisdom that can transform your perspective.
+                    </p>
+                    <p>
+                        Whether you're seeking inspiration, looking for practical life strategies, or 
+                        simply want to be part of a community that values positivity and growth, 
+                        our content is designed to meet you wherever you are on your journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section id="podcast" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-podcast"></i> Podcast Episode</h2>
+                <p>Immerse yourself in thoughtful conversations about finding joy in everyday life</p>
+            </div>
+            <div class="media-card">
+                <div class="media-info">
+                    <h3>A Quest for Joy - Episode</h3>
+                    <p class="media-description">
+                        Join us on this enlightening journey as we explore the pathways to genuine happiness, 
+                        sharing practical strategies and heartfelt stories that will inspire you to discover 
+                        your own quest for joy.
+                    </p>
+                    <div class="media-meta">
+                        <span><i class="fas fa-clock"></i> Duration: <span id="podcast-duration">Loading...</span></span>
+                        <span><i class="fas fa-calendar"></i> Released: 2024</span>
+                    </div>
+                </div>
+                <div class="audio-player">
+                    <audio controls preload="metadata" id="podcast-audio">
+                        <source src="A_Quest_for_Joy.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="audio-controls">
+                        <button class="control-btn" id="play-pause-audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="progress-bar">
+                            <div class="progress" id="audio-progress"></div>
+                        </div>
+                        <span class="time-display" id="audio-time">0:00 / 0:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-video"></i> Video Experience</h2>
+                <p>Watch the visual journey of discovering joy and happiness</p>
+            </div>
+            <div class="media-card">
+                <div class="video-container">
+                    <video controls preload="metadata" id="main-video" poster="video-poster.svg">
+                        <source src="A_Quest_for_Joy.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <div class="video-overlay">
+                        <button class="play-button" id="video-play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="media-info">
+                    <h3>A Quest for Joy - Visual Story</h3>
+                    <p class="media-description">
+                        Experience the powerful visual narrative that complements our podcast. 
+                        This video brings to life the concepts and emotions discussed in our audio content, 
+                        creating a multi-sensory journey toward understanding joy.
+                    </p>
+                    <div class="media-meta">
+                        <span><i class="fas fa-clock"></i> Duration: <span id="video-duration">Loading...</span></span>
+                        <span><i class="fas fa-eye"></i> HD Quality</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Strategy Section -->
+    <section id="strategy" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Experience Strategy</h2>
+                <p>Visual representation of our strategic approach and framework</p>
+            </div>
+            <div class="strategy-content">
+                <div class="strategy-image-container">
+                    <img src="strategy image.png" alt="Experience Strategy Framework" class="strategy-image">
+                    <div class="image-caption">
+                        <h3>Strategic Framework Overview</h3>
+                        <p>Comprehensive visualization of our experience transformation strategy, showing key components, relationships, and implementation pathways.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Squads Section -->
+    <section id="squads" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Team Squads</h2>
+                <p>Explore our dynamic team structure and squad organization</p>
+            </div>
+            <div class="pdf-preview-card">
+                <div class="pdf-preview">
+                    <div class="pdf-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="pdf-overlay">
+                        <h3>Squads Structure</h3>
+                        <p>Detailed breakdown of our team squads, roles, and responsibilities</p>
+                        <div class="pdf-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF Document</span>
+                            <span><i class="fas fa-download"></i> Downloadable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pdf-actions">
+                    <a href="squads pdf.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> View Details
+                    </a>
+                    <a href="squads pdf.pdf" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Org Chart Section -->
+    <section id="org-chart" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-sitemap"></i> Organization Chart</h2>
+                <p>View our complete organizational structure and hierarchy</p>
+            </div>
+            <div class="pdf-preview-card">
+                <div class="pdf-preview">
+                    <div class="pdf-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="pdf-overlay">
+                        <h3>Experience Expo Org Chart</h3>
+                        <p>Complete organizational hierarchy showing reporting structure and team relationships</p>
+                        <div class="pdf-meta">
+                            <span><i class="fas fa-file-alt"></i> PDF Document</span>
+                            <span><i class="fas fa-sitemap"></i> Organizational View</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pdf-actions">
+                    <a href="Org Chart - Exp.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> View Details
+                    </a>
+                    <a href="Org Chart - Exp.pdf" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Experience Expo: The Journey to Experience Squads</h2>
+                <p>Transforming Sam's Club through strategic organizational innovation</p>
+            </div>
+            <div class="about-content">
+                <div class="experience-overview">
+                    <div class="overview-header">
+                        <h3>Strategic Transformation Overview</h3>
+                        <p>
+                            The formation of the experience organization marked a deliberate shift in strategy, recognizing 
+                            that future growth relies on innovation in experience, making it the brand's true differentiator. 
+                            This initiative began roughly 110 days prior to one discussion and resulted in the establishment 
+                            of the experience team as a new differentiator.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-sections">
+                    <!-- Challenge Section -->
+                    <div class="content-section-item">
+                        <div class="section-header-content">
+                            <div class="section-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="section-title">
+                                <h4>The Challenge with the Previous Model</h4>
+                                <span class="section-subtitle">Understanding Historical Operations</span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <p>
+                                Historically, the organization operated in vertical silos, focusing on individual components 
+                                rather than thinking horizontally about the complete member journey. Evidence showed the 
+                                organization was excellent at launching features, with <strong>over 6,500 major launches</strong> 
+                                and <strong>60,000 changes</strong> rolled out in the previous year. However, this vertical 
+                                approach created inconsistency and challenges for members and associates.
+                            </p>
+                            <div class="challenge-example">
+                                <h5>Key Illustration: Membership Signups</h5>
+                                <p>
+                                    <strong>70% of new members sign up digitally</strong>, yet the physical (in-club) and 
+                                    digital processes historically had inconsistencies, including different brand logos, 
+                                    messaging, colors, and rules. This fragmented approach often prioritized saving time 
+                                    internally rather than delivering a cohesive experience to the end user.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Shift Section -->
+                    <div class="content-section-item">
+                        <div class="section-header-content">
+                            <div class="section-icon">
+                                <i class="fas fa-compass"></i>
+                            </div>
+                            <div class="section-title">
+                                <h4>The Strategic Shift to Squads</h4>
+                                <span class="section-subtitle">End-to-End User Mindset</span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <p>
+                                To overcome these silos, the organization decided to adjust its ways of working, moving 
+                                toward an end-to-end user mindset. The goal is to move from launching incremental features 
+                                to designing end-to-end experiences. This is intended to eliminate friction for both members 
+                                and associates, making the overall experience <strong>"effortless"</strong> and <strong>"personal"</strong>.
+                            </p>
+                            <p>
+                                The shift involves introducing <strong>nine experience squads</strong> that are deemed 
+                                transformative to the Sam's Club experience. These squads are meant to reshape how the 
+                                organization works, placing member experience at the center.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Squads Section -->
+                    <div class="content-section-item">
+                        <div class="section-header-content">
+                            <div class="section-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="section-title">
+                                <h4>Nine Experience Squads</h4>
+                                <span class="section-subtitle">Comprehensive Experience Coverage</span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="squads-grid">
+                                <div class="squad-item">
+                                    <span class="squad-number">1</span>
+                                    <h5>In Club Experience</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">2</span>
+                                    <h5>Club Associate Experience</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">3</span>
+                                    <h5>Location, Asset Strategy & Lifecycle</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">4</span>
+                                    <h5>Online Experience</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">5</span>
+                                    <h5>Membership Lifecycle</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">6</span>
+                                    <h5>Services Experience</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">7</span>
+                                    <h5>E2E Replenishment & Inventory Placement</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">8</span>
+                                    <h5>Catalog & Merchant Tools</h5>
+                                </div>
+                                <div class="squad-item">
+                                    <span class="squad-number">9</span>
+                                    <h5>Product Development & Trends</h5>
+                                </div>
+                            </div>
+                            <div class="operational-pillars">
+                                <h5>Guided by Operational Pillars:</h5>
+                                <ul class="pillars-list">
+                                    <li><strong>Design First Culture</strong></li>
+                                    <li><strong>Empowered Associates</strong></li>
+                                    <li><strong>Leading Retail Technology</strong> (Powered by Data, Driven by AI)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Talent Strategy Section -->
+                    <div class="content-section-item">
+                        <div class="section-header-content">
+                            <div class="section-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <div class="section-title">
+                                <h4>The Essential Role of Talent</h4>
+                                <span class="section-subtitle">Tech Powered, Human Led</span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <p>
+                                Talent and technology form the strong foundation needed to accelerate strategic execution. 
+                                The success of the new squad structure hinges on placing talent strategically and ensuring 
+                                associates are empowered. The goal is to be <strong>"tech powered, but human led"</strong>.
+                            </p>
+                            
+                            <div class="talent-highlight">
+                                <h5>Creating Moments of Joy</h5>
+                                <p>
+                                    Associates are crucial in driving positive member experiences. For instance, one associate 
+                                    named Brian from the Las Vegas club was highlighted for walking across the parking lot 
+                                    to help an injured woman get inside safely with a cart, creating moments of happiness 
+                                    and showing the human, community aspect of the club. This associate interaction is 
+                                    likened to the way Disney "cast members" are encouraged to "create magic" for someone.
+                                </p>
+                            </div>
+
+                            <div class="structure-points">
+                                <h5>Structure and Accountability Framework:</h5>
+                                <div class="framework-grid">
+                                    <div class="framework-item">
+                                        <h6>Clear Business Leaders</h6>
+                                        <p>Squads led by leaders responsible for thinking across the entire experience</p>
+                                    </div>
+                                    <div class="framework-item">
+                                        <h6>Cross-Functional Teams</h6>
+                                        <p>Business owners, product leads, design leads, and marketing/people leaders</p>
+                                    </div>
+                                    <div class="framework-item">
+                                        <h6>User-Driven Focus</h6>
+                                        <p>Moving away from stakeholder-driven towards being user-driven</p>
+                                    </div>
+                                    <div class="framework-item">
+                                        <h6>Empathy and Discovery</h6>
+                                        <p>Design thinking with empathy at the center as a competitive differentiator</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformation Analogy Section -->
+                    <div class="content-section-item analogy-section">
+                        <div class="section-header-content">
+                            <div class="section-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="section-title">
+                                <h4>The Transformation Vision</h4>
+                                <span class="section-subtitle">From Relay Race to Design Studio</span>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="analogy-content">
+                                <p>
+                                    The transition to experience squads is like moving from a <strong>relay race</strong>, 
+                                    where each department hands off a project piece by piece, to a <strong>unified design studio</strong>, 
+                                    where cross-functional artists (the core talent) work side-by-side from start to finish, 
+                                    ensuring the final product reflects a single, cohesive vision for the customer.
+                                </p>
+                            </div>
+                            <div class="transformation-goal">
+                                <p>
+                                    The overall aim is to leverage talent to move the business from being merely transactional 
+                                    to being focused on relationship building, ensuring that membership feels earned, 
+                                    personalized, and rewarding.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 A Quest for Joy. All rights reserved. | Made with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
